@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -94,13 +104,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "counter", function() { return counter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "increment", function() { return increment; });
-var counter = 1;
-function increment() {
-  counter++;
-}
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"counter\", function() { return counter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"increment\", function() { return increment; });\nvar counter = 1;\nfunction increment() {\n  counter++;\n}\n\n//# sourceURL=webpack:///./es6/lib.js?");
 
 /***/ }),
 
@@ -112,13 +116,9 @@ function increment() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib.js */ "./es6/lib.js");
-
-_lib_js__WEBPACK_IMPORTED_MODULE_0__["increment"]();
-console.log(_lib_js__WEBPACK_IMPORTED_MODULE_0__["counter"]); // 2
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib.js */ \"./es6/lib.js\");\n\n_lib_js__WEBPACK_IMPORTED_MODULE_0__[\"increment\"]();\nconsole.log(_lib_js__WEBPACK_IMPORTED_MODULE_0__[\"counter\"]); // 2\n\n//# sourceURL=webpack:///./es6/main.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map
+});

@@ -7,11 +7,12 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].js"
-    // libraryTarget: "umd"
+    filename: "[name].js",
+    libraryTarget: "umd",
+    globalObject: "this"
   },
   mode: "development",
-  devtool: "source-map",
+  // devtool: "source-map",
   module: {
     rules: [
       {
