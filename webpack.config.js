@@ -30,5 +30,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new CommentPlugin("copyright reserved")]
+  plugins: [new CommentPlugin("copyright reserved"), new HtmlWebpackPlugin()]
 };
