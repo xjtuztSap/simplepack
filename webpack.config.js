@@ -11,6 +11,8 @@ module.exports = {
     globalObject: "this"
   },
   mode: "development",
+  // mode: "production",
+  devtool: "source-map",
   module: {
     rules: [
       {

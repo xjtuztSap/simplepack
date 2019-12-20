@@ -105,7 +105,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"greet\", function() { return greet; });\n/* harmony import */ var _sentence_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sentence.js */ \"./src/sentence.js\");\n\nfunction greet(name) {\n  var text = Object(_sentence_js__WEBPACK_IMPORTED_MODULE_0__[\"sentence\"])(name);\n  return \"\\n    Happy New Year !\\n    http://123.dianping.com!\\n   \".concat(text, \"\\n   \");\n}\n\n//# sourceURL=webpack:///./src/greet.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "greet", function() { return greet; });
+/* harmony import */ var _sentence_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sentence.js */ "./src/sentence.js");
+/* harmony import */ var _log_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./log.js */ "./src/log.js");
+
+
+function greet(name) {
+  var text = Object(_sentence_js__WEBPACK_IMPORTED_MODULE_0__["sentence"])(name);
+  Object(_log_js__WEBPACK_IMPORTED_MODULE_1__["log"])();
+  return "\n    Happy New Year !!!\uFF01\n    http://123.dianping.com!\n   ".concat(text, "\n   ");
+}
 
 /***/ }),
 
@@ -117,7 +127,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _greet_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greet.js */ \"./src/greet.js\");\n\ndocument.write(Object(_greet_js__WEBPACK_IMPORTED_MODULE_0__[\"greet\"])(\"Aaron\"));\n\n//# sourceURL=webpack:///./src/index.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _greet_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greet.js */ "./src/greet.js");
+/* harmony import */ var _log_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./log.js */ "./src/log.js");
+
+
+document.write(Object(_greet_js__WEBPACK_IMPORTED_MODULE_0__["greet"])("Tony~"));
+Object(_log_js__WEBPACK_IMPORTED_MODULE_1__["log"])();
+
+/***/ }),
+
+/***/ "./src/log.js":
+/*!********************!*\
+  !*** ./src/log.js ***!
+  \********************/
+/*! exports provided: log */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "log", function() { return log; });
+function log() {
+  console.log("this is log!");
+}
 
 /***/ }),
 
@@ -129,9 +161,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _gre
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sentence\", function() { return sentence; });\nfunction sentence(name) {\n  return \"Hello, \".concat(name, \" !\");\n}\n\n//# sourceURL=webpack:///./src/sentence.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sentence", function() { return sentence; });
+/* harmony import */ var _log_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./log.js */ "./src/log.js");
+
+function sentence(name) {
+  Object(_log_js__WEBPACK_IMPORTED_MODULE_0__["log"])();
+  return "Hello, ".concat(name, " !");
+}
 
 /***/ })
 
 /******/ });
 });
+//# sourceMappingURL=index.js.map

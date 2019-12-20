@@ -14,7 +14,8 @@
     "execEs6": "babel-node es6/main.js",
     "execCjsLoop1": "node cjs/loop1/main.js",
     "execEs6Loop": "babel-node es6/loop/index.js",
-    "execCjsLoop2": "node cjs/loop2/index.js"
+    "execCjsLoop2": "node cjs/loop2/index.js",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
