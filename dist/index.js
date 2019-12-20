@@ -1,3 +1,4 @@
+// copyright reserved
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -104,7 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"greet\", function() { return greet; });\n/* harmony import */ var _sentence_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sentence.js */ \"./src/sentence.js\");\n\nfunction greet(name) {\n  var text = Object(_sentence_js__WEBPACK_IMPORTED_MODULE_0__[\"sentence\"])(name);\n  return \"\\n    Happy New Year !\\n   \".concat(text, \"\\n   \");\n}\n\n//# sourceURL=webpack:///./src/greet.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"greet\", function() { return greet; });\n/* harmony import */ var _sentence_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sentence.js */ \"./src/sentence.js\");\n\nfunction greet(name) {\n  var text = Object(_sentence_js__WEBPACK_IMPORTED_MODULE_0__[\"sentence\"])(name);\n  return \"\\n    Happy New Year !\\n    http://123.dianping.com!\\n   \".concat(text, \"\\n   \");\n}\n\n//# sourceURL=webpack:///./src/greet.js?");
 
 /***/ }),
 
