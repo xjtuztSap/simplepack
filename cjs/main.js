@@ -1,4 +1,4 @@
-var counter = require("./lib.js");
-counter.increment();
+var Counter = require("./lib.js");
+Counter.increment();
 
-console.log(counter.counter); // 1
+console.log(Counter.counter); // 1
