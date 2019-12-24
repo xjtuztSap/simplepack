@@ -1,6 +1,12 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CommentPlugin = require("./comment-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
+const { argv } = process;
+const isWebpackDevServer =
+  argv && argv[1] && argv[1].endsWith("webpack-dev-server");
 
 module.exports = {
   entry: path.join(__dirname, "./src/index.js"),
@@ -32,5 +38,28 @@ module.exports = {
       }
     ]
   },
-  plugins: [new CommentPlugin("copyright reserved"), new HtmlWebpackPlugin()]
+  plugins: [
+    new CommentPlugin("copyright reserved"),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      isWebpackDevServer
+    }),
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      isWebpackDevServer
+    })
+  ],
+  // watch: true,
+  // watchOptions: {
+  //   aggregateTimeout: 300,
+  //   poll: 1000 // 每秒检查一次变动
+  // },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    hot: true,
+    port: 8089,
+    host: "localhost",
+    disableHostCheck: true
+  }
 };

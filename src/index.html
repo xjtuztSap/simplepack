@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>simplepack</title>
+    <title>Document</title>
   </head>
   <body>
-    loading...
-    <script src="./main.js"></script>
+    <input />
+    <div id="inputText"></div>
+    <div id="app"></div>
+
+    <% if (!htmlWebpackPlugin.options.isWebpackDevServer) { %>
+    <script src="/socket.io/socket.io.js"></script>
+    <% } %>
   </body>
 </html>
