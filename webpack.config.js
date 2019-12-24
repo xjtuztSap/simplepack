@@ -5,8 +5,8 @@ const CommentPlugin = require("./comment-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const { argv } = process;
-const isWebpackDevServer =
-  argv && argv[1] && argv[1].endsWith("webpack-dev-server");
+const isCustomDevServer =
+  argv && argv[1] && argv[1].endsWith("custom-dev-server");
 
 module.exports = {
   entry: path.join(__dirname, "./src/index.js"),
@@ -18,7 +18,7 @@ module.exports = {
   },
   mode: "development",
   // mode: "production",
-  devtool: "source-map",
+  // devtool: "source-map",
   module: {
     rules: [
       {
@@ -42,12 +42,12 @@ module.exports = {
     new CommentPlugin("copyright reserved"),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      isWebpackDevServer
+      isCustomDevServer
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      isWebpackDevServer
+      isCustomDevServer
     })
   ],
   // watch: true,

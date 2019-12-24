@@ -1,11 +1,13 @@
 import { greet } from "./greet.js";
 
-isWebpackDevServer
-  ? go()
-  : // 加载客户端socket runtime
-    import("./client.js").then(function() {
-      go();
-    });
+if (isCustomDevServer) {
+  // 加载客户端socket runtime
+  import("./client.js").then(function() {
+    go();
+  });
+} else {
+  go();
+}
 
 function go() {
   function render() {

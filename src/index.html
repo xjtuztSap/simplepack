@@ -11,7 +11,7 @@
     <div id="inputText"></div>
     <div id="app"></div>
 
-    <% if (!htmlWebpackPlugin.options.isWebpackDevServer) { %>
+    <% if (htmlWebpackPlugin.options.isCustomDevServer) { %>
     <script src="/socket.io/socket.io.js"></script>
     <% } %>
   </body>
