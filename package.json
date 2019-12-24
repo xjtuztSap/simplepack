@@ -8,7 +8,7 @@
   },
   "scripts": {
     "buildWithSimplepack": "node lib/index.js",
-    "buildWithBrowserify": "browserify browserify/src/index.js -o browserify/dist/bundle.js",
+    "buildWithBrowserify": "browserify src/main.js -o browserify/main.js",
     "build": "webpack",
     "execCjs": "node cjs/main.js",
     "execEs6": "babel-node es6/main.js",
