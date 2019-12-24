@@ -36,6 +36,7 @@ class Server {
     // 如果你把compiler的输出文件系统改成了 MemoryFileSystem的话，则以后再产出文件都打包内存里去了
     compiler.outputFileSystem = fs;
 
+    // 简易版middleware, webpack在这里使用了webpack-dev-middleware
     function middleware(req, res, next) {
       if (req.url === "/favicon.ico") {
         return res.sendStatus(404);
