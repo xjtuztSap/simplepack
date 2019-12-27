@@ -1,5 +1,5 @@
 function domainLoader(source) {
-  return source.replace("sankuai.com", "dianping.com");
+  return source.replace("hello.com", "hey.com");
 }
 
 module.exports = domainLoader;
